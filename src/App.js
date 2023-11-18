@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import MovieList from './Components/MovieList';
 import {Data}  from './Components/DataMovie';
-import NavBar from './Components/NavBar';
+import NavBarr from './Components/NavBar';
 import Filter from './Components/Filter';
 import { Rating } from 'react-simple-star-rating'
 function App ()  {
@@ -33,7 +33,7 @@ setinfo(info.filter((el)=>el.rating>=rating))
         {
         
           <div className='container text-center mt-3 box-state'>
-            <NavBar   Add={Add} />
+            <NavBarr   Add={Add} />
             <Filter search={serch} />
             <Rating  onClick={handleRating} />
             <MovieList props={info} />

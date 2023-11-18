@@ -4,7 +4,8 @@ import Navbar from 'react-bootstrap/Navbar';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
 
-function NavBar({Add}) {
+function NavBarr({Add}) {
+    
 const [title, settitle] = useState("")
 const [desc, setdesc] = useState("")
 const [reating, setreating] = useState(0)
@@ -57,4 +58,4 @@ function handleSubmit(e) {
   );
 }
 
-export default NavBar;
+export default NavBarr;
