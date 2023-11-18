@@ -7,6 +7,7 @@ import {Data}  from './Components/DataMovie';
 import NavBarr from './Components/NavBar';
 import Filter from './Components/Filter';
 import { Rating } from 'react-simple-star-rating'
+import { Route,Routes, } from "react-router-dom";
 function App ()  {
 
 const [info, setinfo] = useState(Data)
@@ -30,16 +31,16 @@ setinfo(info.filter((el)=>el.rating>=rating))
 
     return (
         <>
-        {
-        
-          <div className='container text-center mt-3 box-state'>
-            <NavBarr   Add={Add} />
-            <Filter search={serch} />
-            <Rating  onClick={handleRating} />
-            <MovieList props={info} />
+       <Routes>
+          <Route path="/" element={ <div className='container text-center mt-3 box-state'>  <Filter search={serch} />
+                  <Rating  onClick={handleRating} />
+                  <MovieList props={info} /></div>}/>
+      
+          <Route  path="/add"  element={ <NavBarr   Add={Add} />} /> 
+       </Routes>
             
-          </div>
-        }
+            
+        
         </>
     );
   
